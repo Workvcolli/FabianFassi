@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabian Fassi — Armería, óptica y caza</title>
+  <meta name="description" content="Armas, visores térmicos, óptica y accesorios de caza. Asesoramiento directo y consulta por cada equipo." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="loader" id="loader">
+    <div class="loader__mark">FF</div>
+    <p class="loader__name">Fabian Fassi</p>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#inicio">
+      <span class="nav__mark">FF</span>
+      <span class="nav__word">
+        <small>Armería</small>
+        Fabian Fassi
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#consulta">Consulta</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--ghost" href="#catalogo">Ver equipos</a>
+      <a class="btn btn--copper" data-whatsapp href="#">WhatsApp</a>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer">
+    <a href="#catalogo">Catálogo</a>
+    <a href="#consulta">Consulta</a>
+    <a class="btn btn--copper" data-whatsapp href="#">Escribir por WhatsApp</a>
+  </div>
+
+  <main>
+    <div class="splash" id="inicio">
+    <section class="hero">
+      <div class="hero__media">
+        <img src="assets/hero-forest.jpg" alt="Bosque al amanecer" fetchpriority="high" />
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow" data-reveal>Armería · Óptica · Campo</p>
+        <h1 class="hero__title">
+          <span data-reveal>El monte no espera.</span>
+          <span data-reveal>Tampoco tu equipo.</span>
+        </h1>
+        <p class="hero__lead" data-reveal>
+          Armas, térmicos y accesorios de caza con asesoramiento directo.
+          Ves el producto, abrís la ficha y consultás ese equipo. Sin vueltas.
+        </p>
+        <div class="hero__cta" data-reveal>
+          <a class="btn btn--copper btn--lg" href="#catalogo">Entrar al catálogo</a>
+          <a class="btn btn--line btn--lg" href="#consulta">Hablar con Fabian</a>
+        </div>
+      </div>
+      <div class="hero__meta">
+        <div><strong>Stock real</strong><span>Se confirma al consultar</span></div>
+        <div><strong>Respuesta hoy</strong><span>WhatsApp y formulario</span></div>
+        <div><strong>Normativa</strong><span>Ventas según ANMaC</span></div>
+      </div>
+      <a class="hero__scroll" href="#categorias">Bajar</a>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Visores térmicos</span><span>Cerrojo</span><span>Clip-on</span><span>Prismáticos</span>
+        <span>Visión nocturna</span><span>Cuchillería</span><span>Telémetros</span><span>Campo</span>
+        <span>Visores térmicos</span><span>Cerrojo</span><span>Clip-on</span><span>Prismáticos</span>
+        <span>Visión nocturna</span><span>Cuchillería</span><span>Telémetros</span><span>Campo</span>
+      </div>
+    </section>
+    </div>
+
+    <section class="cats" id="categorias">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Líneas</p>
+          <h2>Lo que vas a necesitar<br />antes de salir.</h2>
+        </div>
+        <div class="cats__grid">
+          <button class="cat" data-jump="armas"><span>01</span><strong>Armas</strong><em>Cerrojo y plataformas de caza</em></button>
+          <button class="cat" data-jump="termicos"><span>02</span><strong>Térmicos</strong><em>Visores, monoculares y clip-on</em></button>
+          <button class="cat" data-jump="optica"><span>03</span><strong>Óptica</strong><em>Prismáticos y telémetros</em></button>
+          <button class="cat" data-jump="vision"><span>04</span><strong>Nocturna</strong><em>Nitidez cuando se apaga el día</em></button>
+          <button class="cat" data-jump="accesorios"><span>05</span><strong>Accesorios</strong><em>Cuchillo, monturas, detalles</em></button>
+          <button class="cat" data-jump="campo"><span>06</span><strong>Campo</strong><em>Prenda y carga para la jornada</em></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <div class="wrap">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Catálogo</p>
+            <h2>Elegí, abrí, consultá.</h2>
+          </div>
+          <p class="section-head__note">Cada card abre una ficha con datos y un botón de consulta para ese producto.</p>
+        </div>
+
+        <div class="filters" id="filters" role="tablist" aria-label="Filtrar catálogo">
+          <button class="is-on" data-filter="todos">Todo</button>
+          <button data-filter="armas">Armas</button>
+          <button data-filter="termicos">Térmicos</button>
+          <button data-filter="optica">Óptica</button>
+          <button data-filter="vision">Nocturna</button>
+          <button data-filter="accesorios">Accesorios</button>
+          <button data-filter="campo">Campo</button>
+        </div>
+
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="feature" id="serie">
+      <div class="feature__bg">
+        <img src="assets/product-thermal.jpg" alt="" />
+      </div>
+      <div class="wrap feature__inner">
+        <div class="feature__copy">
+          <p class="eyebrow">Serie Bruma</p>
+          <h2>Cuando la luz se acaba,<br />el calor sigue hablando.</h2>
+          <p>
+            La línea térmica que armamos para cazadores que salen de madrugada
+            y no quieren pelearse con el menú. Imagen limpia, cuerpo liviano,
+            y un asesor que te dice si te sirve para tu calibre y tu terreno.
+          </p>
+          <ul class="feature__list">
+            <li>Sensor de alta densidad, paletas de caza reales</li>
+            <li>Cuerpos compactos, pensados para el hombro</li>
+            <li>Clip-on para no cambiar el visor diurno</li>
+          </ul>
+          <a class="btn btn--copper" href="#catalogo" data-jump="termicos">Ver térmicos</a>
+        </div>
+        <aside class="feature__card">
+          <p>Lo más pedido</p>
+          <h3>Trace 35</h3>
+          <p>Monocular térmico de mano. Lo llevás en el pecho y localizás antes de armar.</p>
+          <button class="btn btn--line" data-open="trace-35">Abrir ficha</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="wrap">
+        <blockquote>
+          <p>“Si no lo usaría en el monte, no lo ofrezco. El resto es ruido.”</p>
+          <footer>Fabian Fassi <span>— Armería y óptica de caza</span></footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="consulta" id="consulta">
+      <div class="wrap consulta__grid">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Decime qué vas a cazar.<br />Armamos el equipo.</h2>
+          <p class="consulta__lead">
+            Completá el formulario o escribí por WhatsApp. Si venís de una ficha,
+            el producto ya queda indicado.
+          </p>
+          <ul class="consulta__facts">
+            <li>Respuesta en el día hábil</li>
+            <li>Precios y stock al momento de la consulta</li>
+            <li>Ventas de armas conforme a la ley argentina</li>
+          </ul>
+          <a class="btn btn--copper btn--lg" data-whatsapp href="#">Abrir WhatsApp</a>
+        </div>
+        <form class="form" id="form" novalidate>
+          <label>
+            <span>Nombre</span>
+            <input type="text" name="nombre" required placeholder="Tu nombre" autocomplete="name" />
+          </label>
+          <label>
+            <span>WhatsApp</span>
+            <input type="tel" name="tel" required placeholder="11 0000 0000" autocomplete="tel" />
+          </label>
+          <label>
+            <span>Producto</span>
+            <input type="text" name="producto" id="formProducto" placeholder="Si ya lo elegiste, aparece acá" />
+          </label>
+          <label>
+            <span>Mensaje</span>
+            <textarea name="mensaje" rows="4" placeholder="Calibre, uso, plazo, lo que haga falta."></textarea>
+          </label>
+          <button class="btn btn--copper btn--lg btn--full" type="submit">Enviar consulta</button>
+          <p class="form__ok" id="formOk" hidden>Listo. Te abrimos WhatsApp con el mensaje armado.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div>
+        <div class="nav__logo">
+          <span class="nav__mark">FF</span>
+          <span class="nav__word">Fabian Fassi</span>
+        </div>
+        <p>Armería, óptica térmica y accesorios de caza. Consulta directa por cada equipo.</p>
+      </div>
+      <div>
+        <p>Mapa</p>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#consulta">Consulta</a>
+      </div>
+      <div>
+        <p>Legal</p>
+        <small>La venta de armas de fuego y municiones se realiza únicamente a titulares habilitados, de acuerdo con la normativa de ANMaC y demás leyes vigentes. Uso responsable.</small>
+      </div>
+    </div>
+    <div class="wrap foot__bar">
+      <span>© 2026 Fabian Fassi</span>
+      <span>Hecho para el monte, no para la vidriera.</span>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-whatsapp href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A11 11 0 0 0 2.1 17.8L1 23l5.3-1.1A11 11 0 0 0 20.5 3.5Zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-3.2.7.7-3.1-.2-.3A9 9 0 1 1 12 20.5Zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6 0a7.4 7.4 0 0 1-2.2-1.4 8 8 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.4a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4.1 15 15 0 0 0 1.5.5 3.6 3.6 0 0 0 1.6.1 2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3Z"/>
+    </svg>
+  </a>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__x" data-close aria-label="Cerrar">×</button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
